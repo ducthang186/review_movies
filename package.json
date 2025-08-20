@@ -10,7 +10,8 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+     "build": "echo \"No build step\""
   },
    "engines": {
     "node": "18.x",

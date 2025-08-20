@@ -2,7 +2,7 @@ import app from "./server.js";
 import mongodb from "mongodb";
 import dotenv from "dotenv";
 import MoviesDAO from "./models/moviesDAO.js";
-import ReviewsDAO from "./models/reviewsDAO.js";
+import ReviewsDAO from './models/reviewsDAO.js';
 async function main() {
   dotenv.config();
   const client = new mongodb.MongoClient(process.env.MOVIE_REVIEWS_APP_URI);
@@ -10,10 +10,11 @@ async function main() {
   try {
     await client.connect();
     await MoviesDAO.injectDB(client);
-    app.listen("0.0.0.0", () => {
+    app.listen(port, '0.0.0.0', () => {
       console.log(`Server is running on port ${port}`);
     });
-    await ReviewsDAO.injectDB(client);
+    await ReviewsDAO.injectDB(client)
+
   } catch (e) {
     console.error(e);
     process.exit(1);
