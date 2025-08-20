@@ -4,7 +4,7 @@ import movies_router from "./routes/movie_router.js";
 import reviews_router from "./routes/reviews_router.js";
 const app = express();
 
-// app.use(cors());
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
