@@ -11,5 +11,10 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
+  },
+   "engines": {
+    "node": "18.x",
+    "npm": "9.x"
   }
+
 }
